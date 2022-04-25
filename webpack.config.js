@@ -1,5 +1,4 @@
 const path = require("path");
-    const webpack = require("webpack");
     const { merge } = require("webpack-merge");
     const HtmlWebpackPlugin = require("html-webpack-plugin");
     const modeConfiguration = env => require(`./build-utils/webpack.${env}`)(env);
@@ -32,8 +31,7 @@ const path = require("path");
                 plugins: [
                     new HtmlWebpackPlugin({
                         template: "./public/index.html"
-                    }),
-                    new webpack.HotModuleReplacementPlugin()
+                    })
                 ]
             },
             modeConfiguration(mode)
