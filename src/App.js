@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>I'm configuring setting up Webpack!!!</h1>
+        <h1>I`&apos;`m configuring setting up Webpack!!!</h1>
         <p>{`The count now is: ${this.state.counter}`}</p>
         <button onClick={this.handleClick}>Click me</button>
       </div>
