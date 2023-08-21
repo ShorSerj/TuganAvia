@@ -21,3 +21,4 @@ jobs:
         issue_title=$(echo ${{ github.event.issue.title }} | tr ' ' '_' | tr '[:upper:]' '[:lower:]')
         branch_name="issue_${issue_number}_${issue_title}"
         git branch $branch_name
+        git checkout -b $branch_name
