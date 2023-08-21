@@ -15,7 +15,7 @@ jobs:
 
     - name: Create Branch
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} 
+        ACCESS_TOKEN: ${{ secrets.TUGAN_AVIA_SERGEY }} 
       run: |
         issue_number=$(echo ${{ github.event.issue.number }})
         issue_title=$(echo ${{ github.event.issue.title }} | tr ' ' '_' | tr '[:upper:]' '[:lower:]')
