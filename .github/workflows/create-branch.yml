@@ -13,6 +13,11 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
 
+    - name: Set up Git
+      run: |
+        git config --global user.name ShorSerj
+        git config --global user.email shorser8@gmail.com
+        
     - name: Create Branch
       env:
         ACCESS_TOKEN: ${{ secrets.TUGAN_AVIA_SERGEY }} 
