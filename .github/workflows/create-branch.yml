@@ -12,11 +12,6 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v3
-
-    - name: Set up Git
-      run: |
-        git config --global user.name ShorSerj
-        git config --global user.email shorser8@gmail.com
         
     - name: Create Branch
       env:
@@ -26,5 +21,3 @@ jobs:
         issue_title=$(echo ${{ github.event.issue.title }} | tr ' ' '_' | tr '[:upper:]' '[:lower:]')
         branch_name="issue_${issue_number}_${issue_title}"
         git branch $branch_name
-        git checkout $branch_name
-        git push origin $branch_name
